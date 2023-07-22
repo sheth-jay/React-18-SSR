@@ -7,7 +7,7 @@ import App from "../src/App";
 const app = express();
 
 app.get("/*", (req, res) => {
-  const entryPoint = ["../build/static/js/main.54829247.js"];
+  const entryPoint = ["/main.js"];
 
   const { pipe, abort: _abort } = ReactDOMServer.renderToPipeableStream(
     <StaticRouter location={req.url}>
@@ -29,5 +29,5 @@ app.get("/*", (req, res) => {
 });
 
 app.listen(3002, () => {
-  console.log("App is running on 3002");
+  console.log("App is running on http://localhost:3002");
 });

@@ -2,13 +2,64 @@ import React from "react";
 import { Link, Route, Routes } from "react-router-dom";
 import About from "./About";
 import Home from "./Home";
+import "./App.css";
+
+const styles = {
+  main_header: {
+    backgroundColor: "white",
+    display: "flex",
+    alignItem: "center",
+    justifyContent: "center",
+    boxShadow: "rgba(17, 17, 26, 0.1) 0px 2px 0px",
+  },
+
+  header: {
+    padding: "0.6rem",
+    width: "85rem",
+    display: "flex",
+    alignItem: "center",
+    justifyContent: "space-between",
+  },
+
+  navbar: {
+    display: "flex",
+    alignItem: "center",
+    justifyContent: "center",
+  },
+
+  nav_link: {
+    textDecoration: "none",
+    color: "white",
+    background: "rgb(239, 83, 102)",
+    fontSize: "1.2rem",
+    padding: "0.3rem 1.6rem",
+    margin: "5px",
+    border: "1px solid white",
+    borderRadius: "0.3rem",
+  },
+
+  logo: {
+    height: "2.4rem",
+  },
+};
 
 const App = () => {
   return (
-    <div className="app">
-      <h1>Hello There !</h1>
-      <Link to="/">Home</Link>
-      <Link to="/about">About</Link>
+    <div>
+      <div style={styles.main_header}>
+        <div style={styles.header}>
+          <img src="https://github.com/sheth-jay/React-18-SSR/blob/main/download.png?raw=true" alt="Simform Logo" style={styles.logo} />
+          <div style={styles.navbar}>
+            <Link to="/" style={styles.nav_link}>
+              Home
+            </Link>
+            <Link to="/about" style={styles.nav_link}>
+              About
+            </Link>
+          </div>
+        </div>
+      </div>
+
       <Routes>
         <Route path="/" element={<Home />}></Route>
         <Route path="/about" element={<About />}></Route>
