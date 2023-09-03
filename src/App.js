@@ -48,7 +48,6 @@ const App = () => {
     <div>
       <div style={styles.main_header}>
         <div style={styles.header}>
-          <img src="https://github.com/sheth-jay/React-18-SSR/blob/main/download.png?raw=true" alt="Simform Logo" style={styles.logo} />
           <div style={styles.navbar}>
             <Link to="/" style={styles.nav_link}>
               Home
