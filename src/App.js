@@ -18,7 +18,7 @@ const styles = {
     width: "85rem",
     display: "flex",
     alignItem: "center",
-    justifyContent: "space-between",
+    justifyContent: "center",
   },
 
   navbar: {
