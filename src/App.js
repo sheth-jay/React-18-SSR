@@ -37,10 +37,6 @@ const styles = {
     border: "1px solid white",
     borderRadius: "0.3rem",
   },
-
-  logo: {
-    height: "2.4rem",
-  },
 };
 
 const App = () => {
